@@ -1,0 +1,7 @@
+/* style.css - global page styles */
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 1rem;
+}
