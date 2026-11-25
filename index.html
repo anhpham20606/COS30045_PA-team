@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hospitalised Road Crash Injuries in Australia</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beyond the Fatality Numbers: Who Is Being Hurt on Australia's Roads? (2011–2021)</title>
+<meta name="description" content="A scroll-driven data story on hospitalised road-crash injuries in Australia, 2011–2021 (BITRE data).">
+<link rel="preload" href="assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<!-- GenAI: this project was generated with Claude (Anthropic) from a detailed brief; reviewed and edited by the team. -->
 </head>
 <body>
-  <header>
-    <h1>Hospitalised Road Crash Injuries in Australia</h1>
-  </header>
-
-  <main>
-  
-  </main>
-
-  <script src="js/main.js"></script>
+<a class="skipmain" href="#story">Skip to content</a>
+<nav id="nav" aria-label="Chapters"></nav>
+<header class="hero" id="top">
+  <div class="hero-text">
+    <p class="kicker">COS30045 Data Visualisation Project</p>
+    <h1>Beyond the Fatality Numbers: Who Is Being Hurt on Australia's Roads?</h1>
+    <p class="lead">Road deaths get most of the headlines. This story looks at the far larger group who survive but end up in hospital: who they are and where, 2011–2021.</p>
+    <p class="bignum" aria-label="34,033 cases in 2011 rising to 39,505 in 2021, up 16 percent"><span>34,033</span> → <span>39,505</span> <b>+16%</b></p>
+    <a class="btn big" href="#ch1">Start the journey</a>
+    <p class="small">Counts are hospital cases (injury episodes) that did not end in death within 30 days of admission. They are not people, and not rates unless stated.</p>
+  </div>
+  <img class="px hero-img" src="assets/img/traffic_light.png" alt="Pixel-art traffic light, our guide through the story">
+</header>
+<main id="story"><noscript><p class="card">This data story needs JavaScript. Please enable it to see the charts.</p></noscript></main>
+<footer>
+  <details class="card"><summary>About the data</summary>
+    <p>Source: Bureau of Infrastructure and Transport Research Economics (BITRE), <a href="https://www.bitre.gov.au/publications/ongoing/hospitalised-injury">Hospitalised injury data</a>, derived from the AIHW National Hospital Morbidity Database, 2011–2021. “Road-crash injuries” are hospital separations whose cause is a road vehicle traffic accident. Data are aggregated (no individuals), cleaned in KNIME, and subject to revision.</p>
+    <p>Population (Chapter 5 only): Australian Bureau of Statistics (ABS), <a href="https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release">National, state and territory population</a> (cat. no. 3101.0), Table 4 “Estimated Resident Population, States and Territories”. We used the persons estimate at 30 June of each year (2011–2021) for each state and territory, joined to BITRE counts in KNIME to calculate crude cases per 100,000 people. Rates are not age-standardised, and ABS estimates are revised over time. First Nations data are presented as counts only, with respect and without inferring risk.</p>
+  </details>
+  <p id="deathsSrc" hidden>Road deaths (Chapter 1): Road Safety Data Hub, <a href="https://datahub.roadsafety.gov.au/reporting/annual-trauma">Road Trauma Australia 2024</a> (September 2025), Table 4 “Historical deaths and fatality rate per 100,000 population”, from the Australian Road Deaths Database. Rates quoted in the text of Chapters 4 and 5: the same report, Table 9 (by age group) and Table 20 (by remoteness area), 2017–2021 only, with injury data supplied by the Australian Institute of Health and Welfare (AIHW) and population from the ABS. The report’s hospital totals are revised and differ slightly from the BITRE Sept 2023 release used for the charts (for example 2021: {{aihw_2021}} in Table 6 vs {{bitre_2021}} here). Differences in definition and timing mean the two sources are never combined in one count.</p>
+  <p><b>GenAI declaration:</b> the website code was written by Claude (Anthropic) from our prompts and checked by the team. The plain-language declaration and prompt summary are at the top of js/config.js and in GENAI_DECLARATION.md.</p>
+  <p>Team: Pa · Students: Pham Huy Phuc (105715493), Pham Anh (105977992) · <a href="https://github.com/anhpham20606/COS30045_PA-team">GitHub repository</a></p>
+</footer>
+<section class="end" id="end" aria-label="The end of the story">
+  <div class="end-stage">
+    <div class="end-row" id="endRow">
+      <div class="wk wk-l"><img class="px" src="assets/img/worker.png" alt=""></div>
+      <div class="strap"></div>
+      <div class="sign" role="img" aria-label="End"><span class="end-word">END</span><span class="end-sub">Thanks for riding along. Stay safe out there.</span></div>
+      <div class="strap"></div>
+      <div class="wk wk-r"><img class="px" src="assets/img/worker.png" alt=""></div>
+    </div>
+    <div class="end-road"><img class="px" src="assets/img/traffic_cone.png" alt="" style="left:8%"><img class="px" src="assets/img/roadwork_barrier.png" alt="" style="left:44%;height:70px"><img class="px" src="assets/img/traffic_cone.png" alt="" style="right:8%"></div>
+  </div>
+  <p class="endlink"><a class="btn" href="#top">Back to top</a></p>
+</section>
+<div id="lamp" data-s="r" aria-hidden="true"><img class="px" src="assets/img/traffic_light.png" alt=""><i class="r"></i><i class="y"></i><i class="g"></i></div>
+<div id="tip" role="status" aria-live="off"></div>
+<div id="live" class="sr-only" aria-live="polite"></div>
+<!-- D3 v7.9.0 served locally (js/vendor) so the site works even if the CDN is blocked -->
+<script src="js/vendor/d3.min.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
