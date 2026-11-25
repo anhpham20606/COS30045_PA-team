@@ -359,7 +359,6 @@ td {
   gap: 6px;
   align-items: center;
 }
-.chip[aria-pressed="true"] { outline: 3px solid var(--acc, #5e35b1); outline-offset: 1px; font-weight: 700; }
 .chip i {
   width: 14px;
   height: 14px;
